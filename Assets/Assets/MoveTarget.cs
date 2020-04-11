@@ -4,20 +4,34 @@ using UnityEngine;
 
 public class MoveTarget : MonoBehaviour
 {
+
+    public GameObject btn;
+
     public LayerMask hitLayers;
+
+    private void Start()
+    {
+        
+    }
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))//If the player has left clicked
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector3 mouse = Input.mousePosition;//Get the mouse Position
-            Ray castPoint = Camera.main.ScreenPointToRay(mouse);//Cast a ray to get where the mouse is pointing at
-            RaycastHit hit;//Stores the position where the ray hit.
-            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, hitLayers))//If the raycast doesnt hit a wall
+            Vector3 mouse = Input.mousePosition;
+            Ray castPoint = Camera.main.ScreenPointToRay(mouse);
+            RaycastHit hit;
+            if (Physics.Raycast(castPoint, out hit, Mathf.Infinity, hitLayers))
             {
                 if (hit.collider.CompareTag("Ground"))
                     this.transform.position = hit.point + Vector3.one * .5f;
             }
         }
     }
+
+
+   /* void Play()
+    {
+        btn.SetActive
+    }*/
 }
 
