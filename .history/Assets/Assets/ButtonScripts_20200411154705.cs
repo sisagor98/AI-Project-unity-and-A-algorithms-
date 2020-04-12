@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class ButtonScripts : MonoBehaviour
 {
-    public Button btn;
+    public GameObject btn;
 
     void Play()
     {
-
+        btn.SetActive(true);
     }
 
 

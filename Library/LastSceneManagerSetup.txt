@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Assets/Pathfinder.unity
+- path: Assets/Assets/GameScrene/Pathfinder.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
